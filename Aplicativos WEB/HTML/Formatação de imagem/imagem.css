@@ -1,0 +1,34 @@
+@charset "Utf-8";
+
+#conteiner {
+	margin: 0 auto;
+	background-color: red;
+	width: 950px;
+}
+
+#esqueda{
+	float: left;
+	background-color: #0033ff;
+	width: 25%;
+}
+
+#centro {
+	float: left;
+	width: 75%;
+	background-color: #003366;
+	color: #FFFFFF;
+}
+
+#banner {
+	width: 100%;
+	height: 45px;
+	background-color: blue;
+	color: #FFFFFF;
+}
+
+#rodape{
+	clear: both;
+	width: 100%;
+	background-color: #000000;
+	color:#FFFFFF;
+}
