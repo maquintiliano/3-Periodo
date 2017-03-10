@@ -1,0 +1,8 @@
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\bin\Debug\CheckBox_Aula3.exe.config
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\bin\Debug\CheckBox_Aula3.exe
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\bin\Debug\CheckBox_Aula3.pdb
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\obj\Debug\CheckBox_Aula3.Form1.resources
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\obj\Debug\CheckBox_Aula3.Properties.Resources.resources
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\obj\Debug\CheckBox_Aula3.csproj.GenerateResource.Cache
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\obj\Debug\CheckBox_Aula3.exe
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\CheckBox_Aula3\CheckBox_Aula3\obj\Debug\CheckBox_Aula3.pdb

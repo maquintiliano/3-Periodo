@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+	h1{
+		text-align: center;
+	}
+
+/* Formatação de imagens com legendas*/
+	div.foto {
+		position: relative;
+		border: 8px solid white ;
+		box-shadow: 1px 1px 4px black;
+		
+	}	
+
+	div.texto{
+		text-align: center;
+
+	}	
+
+

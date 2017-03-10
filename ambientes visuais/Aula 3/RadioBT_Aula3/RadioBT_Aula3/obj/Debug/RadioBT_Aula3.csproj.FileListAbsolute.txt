@@ -1,0 +1,12 @@
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\bin\Debug\RadioBT_Aula3.exe.config
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.csprojResolveAssemblyReference.cache
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.Form1.resources
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.Properties.Resources.resources
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.csproj.GenerateResource.Cache
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\bin\Debug\RadioBT_Aula3.exe
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\bin\Debug\RadioBT_Aula3.pdb
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.exe
+C:\Users\Jr\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.pdb
+C:\Users\BT1\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\bin\Debug\RadioBT_Aula3.exe.config
+C:\Users\BT1\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.exe
+C:\Users\BT1\Google Drive\TADS\3º Semestre\ambientes visuais\Aula 3\RadioBT_Aula3\RadioBT_Aula3\obj\Debug\RadioBT_Aula3.pdb

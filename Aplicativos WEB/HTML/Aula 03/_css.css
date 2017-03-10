@@ -1,0 +1,24 @@
+@carset "utf-8";
+
+		body {
+			font-family: Arial, Verdana, Calibri;
+			font-size: 12px;
+			text-align: justify;
+			margin-left: 20px;
+		}
+		h2{	
+			background-color: #0066ff;
+			color: #CCCCFF;
+			padding: 2px;
+		}
+		p{
+			line-height: 10pt;
+			margin-left: 10pt;
+			text-indent: 20px;
+		}
+		.exp{
+			background-color: rgb(255,342,255);
+		}
+		#dados_pessoais{
+			text-align: center;
+		}

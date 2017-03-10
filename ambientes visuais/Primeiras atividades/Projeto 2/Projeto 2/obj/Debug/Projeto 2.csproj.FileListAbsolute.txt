@@ -1,0 +1,9 @@
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\bin\Debug\Projeto 2.exe.config
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\obj\Debug\Projeto 2.csprojResolveAssemblyReference.cache
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\obj\Debug\Projeto_2.Form1.resources
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\obj\Debug\Projeto_2.Properties.Resources.resources
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\obj\Debug\Projeto 2.csproj.GenerateResource.Cache
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\bin\Debug\Projeto 2.exe
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\bin\Debug\Projeto 2.pdb
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\obj\Debug\Projeto 2.exe
+c:\users\jr\documents\visual studio 2015\Projects\Projeto 2\Projeto 2\obj\Debug\Projeto 2.pdb
