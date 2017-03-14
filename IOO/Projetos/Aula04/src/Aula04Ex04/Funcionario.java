@@ -56,7 +56,7 @@ public class Funcionario {
     public double getNovoSalario(){
         return novoSalario;
     }
-    /*
+    
     public double calcularSalario(){
         if(cargo.equalsIgnoreCase("junior")){
             salario = 1700.0;
@@ -70,7 +70,7 @@ public class Funcionario {
                 }
         
         return salario;
-    }*/
+    }
     
     public double calcularDescontoIRPF(){
        if(salario <= 1710.78){
