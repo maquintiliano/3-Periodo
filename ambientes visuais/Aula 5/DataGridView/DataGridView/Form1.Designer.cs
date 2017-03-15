@@ -44,6 +44,12 @@
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNecEspeciais = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +72,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(50, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(560, 185);
+            this.groupBox1.Size = new System.Drawing.Size(642, 185);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro de Pessoas";
@@ -201,16 +207,53 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNome,
+            this.colNecEspeciais,
+            this.colDataNascimento,
+            this.colSexo,
+            this.colCPF,
+            this.colRG});
             this.dataGridView1.Location = new System.Drawing.Point(50, 226);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 78);
+            this.dataGridView1.Size = new System.Drawing.Size(642, 170);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // colNome
+            // 
+            this.colNome.HeaderText = "Nome";
+            this.colNome.Name = "colNome";
+            // 
+            // colNecEspeciais
+            // 
+            this.colNecEspeciais.HeaderText = "Necessidades Especiais";
+            this.colNecEspeciais.Name = "colNecEspeciais";
+            // 
+            // colDataNascimento
+            // 
+            this.colDataNascimento.HeaderText = "Data de Nascimento";
+            this.colDataNascimento.Name = "colDataNascimento";
+            // 
+            // colSexo
+            // 
+            this.colSexo.HeaderText = "Sexo";
+            this.colSexo.Name = "colSexo";
+            // 
+            // colCPF
+            // 
+            this.colCPF.HeaderText = "CPF";
+            this.colCPF.Name = "colCPF";
+            // 
+            // colRG
+            // 
+            this.colRG.HeaderText = "RG";
+            this.colRG.Name = "colRG";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 316);
+            this.ClientSize = new System.Drawing.Size(735, 408);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -240,6 +283,12 @@
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNecEspeciais;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataNascimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRG;
     }
 }
 
