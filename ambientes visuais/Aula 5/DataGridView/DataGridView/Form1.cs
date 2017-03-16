@@ -23,7 +23,38 @@ namespace DataGridView
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
+            Pessoa pessoa = new Pessoa();
+            pessoa.Nome = txtNome.Text;
 
+            // 0 - Masculino; 1 - Feminino
+            if (cbSexo.SelectedIndex == 0 )
+            {
+                pessoa.Sexo = 'M';
+            }
+            else
+            {
+                pessoa.Sexo = 'F';
+            }
+
+            pessoa.DataNascimento = dtpDataNascimento.Text;
+
+            if (rbSim.Checked)
+            {
+                pessoa.NecessidadesEspeciais = true;
+            }
+            else
+            {
+                pessoa.NecessidadesEspeciais = false;
+            }
+
+            pessoa.RG = mtxtRG.Text;
+            pessoa.CPF = mtxtCPF.Text;
+
+            //adiona objs na lista
+            lista.Add(pessoa);
+
+            //chama método de preenchimento
+            preencherDgv();
         }
 
         private void preencherDgv()
@@ -37,7 +68,7 @@ namespace DataGridView
                 {
                     lista[i].Nome,
                     lista[i].DataNascimento,
-                    lista[i].Sexo == "F" ? "Feminino" : "Masculino",
+                    lista[i].Sexo == 'F' ? "Feminino" : "Masculino",
                     lista[i].CPF, lista[i].RG,
                     lista[i].NecessidadesEspeciais == false ? "Não" : "Sim"
                 };
