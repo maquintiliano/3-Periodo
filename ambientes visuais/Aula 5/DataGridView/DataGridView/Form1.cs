@@ -125,5 +125,23 @@ namespace DataGridView
             mtxtRG.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
             mtxtCPF.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
         }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            //recupera o indice da linha selecionada
+            int indiceLinha = dgvClientes.CurrentRow.Index;
+
+            //remove da lista
+            lista.RemoveAt(indiceLinha);
+
+            //chama o método limpar campos
+            limparCampos();
+
+            //limpa a grid
+            dgvClientes.Rows.Clear();
+
+            //atualiza a grid
+            preencherDgv();
+        }
     }
 }

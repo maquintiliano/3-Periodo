@@ -50,12 +50,14 @@
             this.colSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btExcluir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btExcluir);
             this.groupBox1.Controls.Add(this.btCadastrar);
             this.groupBox1.Controls.Add(this.cbSexo);
             this.groupBox1.Controls.Add(this.mtxtCPF);
@@ -251,6 +253,16 @@
             this.colRG.HeaderText = "RG";
             this.colRG.Name = "colRG";
             // 
+            // btExcluir
+            // 
+            this.btExcluir.Location = new System.Drawing.Point(218, 157);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btExcluir.TabIndex = 2;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +303,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRG;
+        private System.Windows.Forms.Button btExcluir;
     }
 }
 
