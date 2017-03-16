@@ -112,6 +112,8 @@ namespace Aula04
                         //remove da lista
                         lista.RemoveAt(indiceLinha);
 
+                       
+
                     }       
                 }
             }
@@ -124,6 +126,8 @@ namespace Aula04
             //Nula a referencia da fonte de dados (limpa colunas)
             //exibe a lista na DGV
             exibeLista();
+
+
 
         }
     }

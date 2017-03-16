@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btExcluir = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
@@ -45,17 +46,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNecEspeciais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNecEspeciais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btExcluir);
             this.groupBox1.Controls.Add(this.btCadastrar);
             this.groupBox1.Controls.Add(this.cbSexo);
             this.groupBox1.Controls.Add(this.mtxtCPF);
@@ -77,12 +79,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro de Pessoas";
             // 
+            // btExcluir
+            // 
+            this.btExcluir.Location = new System.Drawing.Point(218, 157);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btExcluir.TabIndex = 9;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            // 
             // btCadastrar
             // 
             this.btCadastrar.Location = new System.Drawing.Point(137, 156);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btCadastrar.TabIndex = 13;
+            this.btCadastrar.TabIndex = 8;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = true;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
@@ -96,7 +108,7 @@
             this.cbSexo.Location = new System.Drawing.Point(137, 65);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(121, 21);
-            this.cbSexo.TabIndex = 12;
+            this.cbSexo.TabIndex = 3;
             // 
             // mtxtCPF
             // 
@@ -104,7 +116,8 @@
             this.mtxtCPF.Mask = "999.999.999-99";
             this.mtxtCPF.Name = "mtxtCPF";
             this.mtxtCPF.Size = new System.Drawing.Size(149, 20);
-            this.mtxtCPF.TabIndex = 11;
+            this.mtxtCPF.TabIndex = 7;
+            this.mtxtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mtxtRG
             // 
@@ -112,7 +125,8 @@
             this.mtxtRG.Mask = "99.999.999-9";
             this.mtxtRG.Name = "mtxtRG";
             this.mtxtRG.Size = new System.Drawing.Size(149, 20);
-            this.mtxtRG.TabIndex = 10;
+            this.mtxtRG.TabIndex = 6;
+            this.mtxtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // rbNao
             // 
@@ -120,7 +134,7 @@
             this.rbNao.Location = new System.Drawing.Point(185, 89);
             this.rbNao.Name = "rbNao";
             this.rbNao.Size = new System.Drawing.Size(45, 17);
-            this.rbNao.TabIndex = 9;
+            this.rbNao.TabIndex = 5;
             this.rbNao.TabStop = true;
             this.rbNao.Text = "Não";
             this.rbNao.UseVisualStyleBackColor = true;
@@ -131,7 +145,7 @@
             this.rbSim.Location = new System.Drawing.Point(137, 89);
             this.rbSim.Name = "rbSim";
             this.rbSim.Size = new System.Drawing.Size(42, 17);
-            this.rbSim.TabIndex = 8;
+            this.rbSim.TabIndex = 4;
             this.rbSim.TabStop = true;
             this.rbSim.Text = "Sim";
             this.rbSim.UseVisualStyleBackColor = true;
@@ -142,14 +156,14 @@
             this.dtpDataNascimento.Location = new System.Drawing.Point(137, 41);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(200, 20);
-            this.dtpDataNascimento.TabIndex = 7;
+            this.dtpDataNascimento.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(137, 16);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(198, 20);
-            this.txtNome.TabIndex = 6;
+            this.txtNome.TabIndex = 1;
             // 
             // label6
             // 
@@ -210,25 +224,21 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNome,
-            this.colNecEspeciais,
             this.colDataNascimento,
             this.colSexo,
             this.colCPF,
-            this.colRG});
+            this.colRG,
+            this.colNecEspeciais});
             this.dgvClientes.Location = new System.Drawing.Point(50, 226);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(642, 170);
             this.dgvClientes.TabIndex = 1;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoas_CellClick);
             // 
             // colNome
             // 
             this.colNome.HeaderText = "Nome";
             this.colNome.Name = "colNome";
-            // 
-            // colNecEspeciais
-            // 
-            this.colNecEspeciais.HeaderText = "Necessidades Especiais";
-            this.colNecEspeciais.Name = "colNecEspeciais";
             // 
             // colDataNascimento
             // 
@@ -249,6 +259,11 @@
             // 
             this.colRG.HeaderText = "RG";
             this.colRG.Name = "colRG";
+            // 
+            // colNecEspeciais
+            // 
+            this.colNecEspeciais.HeaderText = "Necessidades Especiais";
+            this.colNecEspeciais.Name = "colNecEspeciais";
             // 
             // Form1
             // 
@@ -285,11 +300,12 @@
         private System.Windows.Forms.Button btCadastrar;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNecEspeciais;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDataNascimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNecEspeciais;
+        private System.Windows.Forms.Button btExcluir;
     }
 }
 
