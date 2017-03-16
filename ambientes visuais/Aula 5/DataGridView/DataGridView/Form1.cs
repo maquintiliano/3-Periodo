@@ -106,5 +106,24 @@ namespace DataGridView
 
 
         }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /* 
+            CurrentRow - recupera a linha selecionada
+
+            Cells[i] - idica qual celula da grid a partir de 0
+
+            Value - Recupera o valor da célula
+
+            ToString - converte pra string um valor.
+
+             */
+
+            txtNome.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+            dtpDataNascimento.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
+            mtxtRG.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+            mtxtCPF.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
+        }
     }
 }
