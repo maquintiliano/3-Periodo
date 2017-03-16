@@ -23,6 +23,7 @@ namespace DataGridView
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
+            
             Pessoa pessoa = new Pessoa();
             pessoa.Nome = txtNome.Text;
 
@@ -57,6 +58,7 @@ namespace DataGridView
             preencherDgv();
         }
 
+        //método de preenchimento do DGV
         private void preencherDgv()
         {
             //limpar DGV
@@ -74,6 +76,35 @@ namespace DataGridView
                 };
                 dgvClientes.Rows.Add(nova_linha);
             }
+        }
+
+        //método de limpar campos
+        private void limparCampos()
+        {
+            //limpa campos de texto
+            txtNome.Clear();
+
+            //volta para dat atual do sistema
+            dtpDataNascimento.Value = DateTime.Now;
+
+            //limpa combobox
+            cbSexo.Text = "";
+
+            //retira o checked
+            if (rbSim.Checked)
+            {
+                rbSim.Checked = false;
+            }
+            else
+            {
+                rbNao.Checked = false;
+            }
+
+            //limpa campos de texto
+            mtxtCPF.Clear();
+            mtxtRG.Clear();
+
+
         }
     }
 }
