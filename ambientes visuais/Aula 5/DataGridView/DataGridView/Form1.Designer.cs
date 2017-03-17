@@ -84,7 +84,7 @@
             this.btCadastrar.Location = new System.Drawing.Point(137, 156);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btCadastrar.TabIndex = 13;
+            this.btCadastrar.TabIndex = 8;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = true;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
@@ -98,7 +98,7 @@
             this.cbSexo.Location = new System.Drawing.Point(137, 65);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(121, 21);
-            this.cbSexo.TabIndex = 12;
+            this.cbSexo.TabIndex = 3;
             // 
             // mtxtCPF
             // 
@@ -106,7 +106,8 @@
             this.mtxtCPF.Mask = "999.999.999-99";
             this.mtxtCPF.Name = "mtxtCPF";
             this.mtxtCPF.Size = new System.Drawing.Size(149, 20);
-            this.mtxtCPF.TabIndex = 11;
+            this.mtxtCPF.TabIndex = 7;
+            this.mtxtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mtxtRG
             // 
@@ -114,7 +115,8 @@
             this.mtxtRG.Mask = "99.999.999-9";
             this.mtxtRG.Name = "mtxtRG";
             this.mtxtRG.Size = new System.Drawing.Size(149, 20);
-            this.mtxtRG.TabIndex = 10;
+            this.mtxtRG.TabIndex = 6;
+            this.mtxtRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // rbNao
             // 
@@ -122,7 +124,7 @@
             this.rbNao.Location = new System.Drawing.Point(185, 89);
             this.rbNao.Name = "rbNao";
             this.rbNao.Size = new System.Drawing.Size(45, 17);
-            this.rbNao.TabIndex = 9;
+            this.rbNao.TabIndex = 5;
             this.rbNao.TabStop = true;
             this.rbNao.Text = "Não";
             this.rbNao.UseVisualStyleBackColor = true;
@@ -133,7 +135,7 @@
             this.rbSim.Location = new System.Drawing.Point(137, 89);
             this.rbSim.Name = "rbSim";
             this.rbSim.Size = new System.Drawing.Size(42, 17);
-            this.rbSim.TabIndex = 8;
+            this.rbSim.TabIndex = 4;
             this.rbSim.TabStop = true;
             this.rbSim.Text = "Sim";
             this.rbSim.UseVisualStyleBackColor = true;
@@ -144,14 +146,14 @@
             this.dtpDataNascimento.Location = new System.Drawing.Point(137, 41);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(200, 20);
-            this.dtpDataNascimento.TabIndex = 7;
+            this.dtpDataNascimento.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(137, 16);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(198, 20);
-            this.txtNome.TabIndex = 6;
+            this.txtNome.TabIndex = 1;
             // 
             // label6
             // 
@@ -258,7 +260,7 @@
             this.btExcluir.Location = new System.Drawing.Point(218, 157);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btExcluir.TabIndex = 2;
+            this.btExcluir.TabIndex = 9;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);

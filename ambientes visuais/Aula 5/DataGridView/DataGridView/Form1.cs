@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace DataGridView
 {
@@ -15,6 +16,11 @@ namespace DataGridView
         //coleção de obj da classe pessoa
         List<Pessoa> lista = new List<Pessoa>();
 
+        //limpa colunas
+        //private void limpaColunas()
+        //{
+        //    dgvClientes.DataSource = null;
+        //}
 
         public Form1()
         {
@@ -23,39 +29,53 @@ namespace DataGridView
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            
             Pessoa pessoa = new Pessoa();
-            pessoa.Nome = txtNome.Text;
 
-            // 0 - Masculino; 1 - Feminino
-            if (cbSexo.SelectedIndex == 0 )
+            if (mtxtRG.Text == string.Empty || mtxtCPF.Text == string.Empty || txtNome.Text == string.Empty)
             {
-                pessoa.Sexo = 'M';
+                MessageBox.Show("Campos em branco \nFavor preencher", "Alerta");
             }
             else
             {
-                pessoa.Sexo = 'F';
+                pessoa.Nome = txtNome.Text;
+
+                // 0 - Masculino; 1 - Feminino
+                if (cbSexo.SelectedIndex == 0)
+                {
+                    pessoa.Sexo = 'M';
+                }
+                else
+                {
+                    pessoa.Sexo = 'F';
+                }
+
+                pessoa.DataNascimento = dtpDataNascimento.Text;
+
+                if (rbSim.Checked)
+                {
+                    pessoa.NecessidadesEspeciais = true;
+                }
+                else
+                {
+                    pessoa.NecessidadesEspeciais = false;
+                }
+
+                pessoa.RG = mtxtRG.Text;
+                pessoa.CPF = mtxtCPF.Text;
+
+                //adiona objs na lista
+                lista.Add(pessoa);
+
+                //chama método de preenchimento
+                preencherDgv();
+
+                //limpacampos para evitar preenchimento duplo
+                limparCampos();
+
+                //limpa colunas | nula referencia
+                // limpaColunas();
             }
-
-            pessoa.DataNascimento = dtpDataNascimento.Text;
-
-            if (rbSim.Checked)
-            {
-                pessoa.NecessidadesEspeciais = true;
-            }
-            else
-            {
-                pessoa.NecessidadesEspeciais = false;
-            }
-
-            pessoa.RG = mtxtRG.Text;
-            pessoa.CPF = mtxtCPF.Text;
-
-            //adiona objs na lista
-            lista.Add(pessoa);
-
-            //chama método de preenchimento
-            preencherDgv();
+            
         }
 
         //método de preenchimento do DGV
@@ -128,20 +148,45 @@ namespace DataGridView
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
-            //recupera o indice da linha selecionada
-            int indiceLinha = dgvClientes.CurrentRow.Index;
+           
+            //verifica se há dados para excluir
+            if (mtxtRG.Text == string.Empty && mtxtCPF.Text == string.Empty && txtNome.Text == string.Empty)
+            {
+                MessageBox.Show("Não há dados para serem excluidos!");
+            }
+            else
+            {
+                //confirmação para exclusão
+                DialogResult resposta = MessageBox.Show("Deseja continuar a operação?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resposta == DialogResult.Yes)
+                {
+                    if (dgvClientes.RowCount !=0)
+                    {
+                        //recupera o indice da linha selecionada
+                         int indiceLinha = dgvClientes.CurrentRow.Index;
 
-            //remove da lista
-            lista.RemoveAt(indiceLinha);
+                        //remove da lista
+                        lista.RemoveAt(indiceLinha);
 
-            //chama o método limpar campos
-            limparCampos();
+                        //chama o método limpar campos
+                        limparCampos();
 
-            //limpa a grid
-            dgvClientes.Rows.Clear();
+                        //limpa a grid
+                        dgvClientes.Rows.Clear();
 
-            //atualiza a grid
-            preencherDgv();
+                        //atualiza a grid
+                        preencherDgv();
+                    }
+                    else if (dgvClientes.RowCount >= 0)
+                    {
+                        MessageBox.Show("Selecione um indice");
+                    }
+
+                }
+            }
+
+           
+           
         }
     }
 }
