@@ -8,5 +8,7 @@ namespace DataGridView
 {
     class usuario
     {
+        public string login { get; set; }
+        public string senha { get; set; }
     }
 }

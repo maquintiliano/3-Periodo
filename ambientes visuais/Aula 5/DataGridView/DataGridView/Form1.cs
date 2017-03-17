@@ -13,14 +13,9 @@ namespace DataGridView
 {
     public partial class Form1 : Form
     {
+        
         //coleção de obj da classe pessoa
         List<Pessoa> lista = new List<Pessoa>();
-
-        //limpa colunas
-        //private void limpaColunas()
-        //{
-        //    dgvClientes.DataSource = null;
-        //}
 
         public Form1()
         {
@@ -71,9 +66,6 @@ namespace DataGridView
 
                 //limpacampos para evitar preenchimento duplo
                 limparCampos();
-
-                //limpa colunas | nula referencia
-                // limpaColunas();
             }
             
         }
@@ -177,7 +169,7 @@ namespace DataGridView
                         //atualiza a grid
                         preencherDgv();
                     }
-                    else if (dgvClientes.RowCount >= 0)
+                    else 
                     {
                         MessageBox.Show("Selecione um indice");
                     }

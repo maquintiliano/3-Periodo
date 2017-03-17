@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btExcluir = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
@@ -45,12 +46,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNecEspeciais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btExcluir = new System.Windows.Forms.Button();
+            this.colNecEspeciais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro de Pessoas";
+            // 
+            // btExcluir
+            // 
+            this.btExcluir.Location = new System.Drawing.Point(218, 157);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btExcluir.TabIndex = 9;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btCadastrar
             // 
@@ -214,11 +224,11 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNome,
-            this.colNecEspeciais,
             this.colDataNascimento,
             this.colSexo,
             this.colCPF,
-            this.colRG});
+            this.colRG,
+            this.colNecEspeciais});
             this.dgvClientes.Location = new System.Drawing.Point(50, 226);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.Size = new System.Drawing.Size(642, 170);
@@ -229,11 +239,6 @@
             // 
             this.colNome.HeaderText = "Nome";
             this.colNome.Name = "colNome";
-            // 
-            // colNecEspeciais
-            // 
-            this.colNecEspeciais.HeaderText = "Necessidades Especiais";
-            this.colNecEspeciais.Name = "colNecEspeciais";
             // 
             // colDataNascimento
             // 
@@ -255,15 +260,10 @@
             this.colRG.HeaderText = "RG";
             this.colRG.Name = "colRG";
             // 
-            // btExcluir
+            // colNecEspeciais
             // 
-            this.btExcluir.Location = new System.Drawing.Point(218, 157);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btExcluir.TabIndex = 9;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.UseVisualStyleBackColor = true;
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            this.colNecEspeciais.HeaderText = "Necessidades Especiais";
+            this.colNecEspeciais.Name = "colNecEspeciais";
             // 
             // Form1
             // 
@@ -299,13 +299,13 @@
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.Button btCadastrar;
         private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.Button btExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNecEspeciais;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDataNascimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRG;
-        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNecEspeciais;
     }
 }
 
