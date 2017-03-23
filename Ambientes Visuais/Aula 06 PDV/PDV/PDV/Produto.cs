@@ -45,16 +45,19 @@ namespace PDV
             return listaProdutos;
         }
 
-        public Produto bucaPorCodigo(int codigo)
+        public Produto buscaPorCodigo(int codigo)
         {
             Produto produtoBusca = null;
             foreach (var produto in getProdutos())
             {
+                
                 if (produto.Codigo == codigo)
                 {
                     produtoBusca = produto;
                     break;
                 }
+                
+                
             }
 
             return produtoBusca;

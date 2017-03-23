@@ -54,9 +54,10 @@
             // lbProduto
             // 
             this.lbProduto.AutoSize = true;
-            this.lbProduto.Location = new System.Drawing.Point(276, 20);
+            this.lbProduto.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProduto.Location = new System.Drawing.Point(233, 4);
             this.lbProduto.Name = "lbProduto";
-            this.lbProduto.Size = new System.Drawing.Size(110, 13);
+            this.lbProduto.Size = new System.Drawing.Size(364, 45);
             this.lbProduto.TabIndex = 0;
             this.lbProduto.Text = "Descrição do Produto";
             // 
@@ -117,6 +118,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtPreco
             // 
@@ -152,6 +154,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Leave += new System.EventHandler(this.txtCodigo_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
