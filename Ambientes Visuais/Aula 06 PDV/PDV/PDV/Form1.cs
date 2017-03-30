@@ -94,8 +94,8 @@ namespace PDV
 
         private void btFinalizar_Click(object sender, EventArgs e)
         {
-            
-            
+            txtTroco.Text = Convert.ToString(Convert.ToDouble(txtValorRecebido.Text) - Convert.ToDouble(txtTotal.Text));
+
         }
 
         //metodo de acumular coluna da DGV
@@ -148,25 +148,6 @@ namespace PDV
             txtPreco.Text = dgvProdutos.CurrentRow.Cells[2].Value.ToString();
             txtQtd.Text = dgvProdutos.CurrentRow.Cells[3].Value.ToString();
         }
-
-        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        /*public double sub()
-        {
-          
-            
-            double cont = 0;
-            foreach (DataGridViewRow row in dgvProdutos.Rows)
-            {
-                cont -= Convert.ToDouble(row.Cells["clPreco"].Value) * Convert.ToDouble(row.Cells["clQtd"].Value);
-
-
-            }
-            txtTotal.Text = cont.ToString();
-            return cont;
-        }*/
+       
     }
 }
