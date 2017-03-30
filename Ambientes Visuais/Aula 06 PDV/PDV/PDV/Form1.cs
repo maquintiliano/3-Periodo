@@ -99,7 +99,7 @@ namespace PDV
         }
 
         //metodo de acumular coluna da DGV
-        private double SomaDGV()
+        private void SomaDGV()
         {
             double soma = 0;
             foreach (DataGridViewRow row in dgvProdutos.Rows)
@@ -109,7 +109,6 @@ namespace PDV
            
             }
             txtTotal.Text = soma.ToString();
-            return soma;
         }
 
         private void btRemover_Click(object sender, EventArgs e)
