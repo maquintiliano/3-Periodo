@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbProduto = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbProduto = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +39,23 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.btIncluir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
+            this.gbVenda = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btFinalizar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtTroco = new System.Windows.Forms.TextBox();
+            this.txtValorRecebido = new System.Windows.Forms.TextBox();
+            this.clDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbProduto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
+            this.gbVenda.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,22 +76,22 @@
             this.lbProduto.TabIndex = 0;
             this.lbProduto.Text = "Descrição do Produto";
             // 
-            // groupBox1
+            // gbProduto
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btIncluir);
-            this.groupBox1.Controls.Add(this.txtPreco);
-            this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Controls.Add(this.txtQtd);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(30, 74);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(178, 182);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Produto";
+            this.gbProduto.Controls.Add(this.button1);
+            this.gbProduto.Controls.Add(this.btIncluir);
+            this.gbProduto.Controls.Add(this.txtPreco);
+            this.gbProduto.Controls.Add(this.txtCodigo);
+            this.gbProduto.Controls.Add(this.txtQtd);
+            this.gbProduto.Controls.Add(this.label3);
+            this.gbProduto.Controls.Add(this.label2);
+            this.gbProduto.Controls.Add(this.label1);
+            this.gbProduto.Location = new System.Drawing.Point(30, 74);
+            this.gbProduto.Name = "gbProduto";
+            this.gbProduto.Size = new System.Drawing.Size(178, 182);
+            this.gbProduto.TabIndex = 1;
+            this.gbProduto.TabStop = false;
+            this.gbProduto.Text = "Produto";
             // 
             // label1
             // 
@@ -117,7 +132,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(10, 38);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtPreco
@@ -135,6 +150,7 @@
             this.btIncluir.TabIndex = 2;
             this.btIncluir.Text = "Incluir";
             this.btIncluir.UseVisualStyleBackColor = true;
+            this.btIncluir.Click += new System.EventHandler(this.btIncluir_Click);
             // 
             // button1
             // 
@@ -145,21 +161,134 @@
             this.button1.Text = "Remover";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // dgvProdutos
+            // 
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clDescricao,
+            this.clCod,
+            this.clPreco,
+            this.clQtd});
+            this.dgvProdutos.Location = new System.Drawing.Point(271, 74);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.Size = new System.Drawing.Size(449, 182);
+            this.dgvProdutos.TabIndex = 1;
+            // 
+            // gbVenda
+            // 
+            this.gbVenda.Controls.Add(this.txtTroco);
+            this.gbVenda.Controls.Add(this.txtValorRecebido);
+            this.gbVenda.Controls.Add(this.btFinalizar);
+            this.gbVenda.Controls.Add(this.label5);
+            this.gbVenda.Controls.Add(this.label4);
+            this.gbVenda.Location = new System.Drawing.Point(30, 262);
+            this.gbVenda.Name = "gbVenda";
+            this.gbVenda.Size = new System.Drawing.Size(178, 128);
+            this.gbVenda.TabIndex = 2;
+            this.gbVenda.TabStop = false;
+            this.gbVenda.Text = "Venda";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Valor recebido:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Troco: ";
+            // 
+            // btFinalizar
+            // 
+            this.btFinalizar.Location = new System.Drawing.Point(6, 99);
+            this.btFinalizar.Name = "btFinalizar";
+            this.btFinalizar.Size = new System.Drawing.Size(166, 23);
+            this.btFinalizar.TabIndex = 2;
+            this.btFinalizar.Text = "Finalizar";
+            this.btFinalizar.UseVisualStyleBackColor = true;
+            this.btFinalizar.Click += new System.EventHandler(this.btFinalizar_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(378, 365);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Total";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(415, 361);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 4;
+            // 
+            // txtTroco
+            // 
+            this.txtTroco.Location = new System.Drawing.Point(78, 54);
+            this.txtTroco.Name = "txtTroco";
+            this.txtTroco.Size = new System.Drawing.Size(100, 20);
+            this.txtTroco.TabIndex = 5;
+            // 
+            // txtValorRecebido
+            // 
+            this.txtValorRecebido.Location = new System.Drawing.Point(78, 28);
+            this.txtValorRecebido.Name = "txtValorRecebido";
+            this.txtValorRecebido.Size = new System.Drawing.Size(100, 20);
+            this.txtValorRecebido.TabIndex = 6;
+            // 
+            // clDescricao
+            // 
+            this.clDescricao.HeaderText = "Descrição";
+            this.clDescricao.Name = "clDescricao";
+            // 
+            // clCod
+            // 
+            this.clCod.HeaderText = "Código";
+            this.clCod.Name = "clCod";
+            // 
+            // clPreco
+            // 
+            this.clPreco.HeaderText = "Preço";
+            this.clPreco.Name = "clPreco";
+            // 
+            // clQtd
+            // 
+            this.clQtd.HeaderText = "Quantidade";
+            this.clQtd.Name = "clQtd";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 311);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(892, 399);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.gbVenda);
+            this.Controls.Add(this.dgvProdutos);
+            this.Controls.Add(this.gbProduto);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Leave += new System.EventHandler(this.txtCodigo_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbProduto.ResumeLayout(false);
+            this.gbProduto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
+            this.gbVenda.ResumeLayout(false);
+            this.gbVenda.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,7 +296,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbProduto;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbProduto;
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtQtd;
@@ -176,6 +305,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btIncluir;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvProdutos;
+        private System.Windows.Forms.GroupBox gbVenda;
+        private System.Windows.Forms.TextBox txtTroco;
+        private System.Windows.Forms.TextBox txtValorRecebido;
+        private System.Windows.Forms.Button btFinalizar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPreco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clQtd;
     }
 }
 

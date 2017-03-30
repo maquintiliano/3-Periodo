@@ -28,7 +28,7 @@ namespace PDV
             this.Qtd = qtd;
         }
 
-        private List<Produto> getProdutos()
+        public List<Produto> getProdutos()
         {
             List<Produto> listaProdutos = new List<Produto>();
             listaProdutos.Add(new Produto(1, "Mamão", 7.50,1));

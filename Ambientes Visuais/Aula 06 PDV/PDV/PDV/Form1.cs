@@ -15,6 +15,9 @@ namespace PDV
         //declara e instancia um objeto produto
         Produto produto = new Produto();
 
+        //declaração lista de obj da classe produto
+        List<Produto> lista = new List<Produto>();
+
         public Form1()
         {
             InitializeComponent();
@@ -34,12 +37,85 @@ namespace PDV
             if (produtoBusca != null)
             {
                 lbProduto.Text = produtoBusca.Descricao;
-                txtPreco.Text = produtoBusca.PrecoUnitario.ToString("C");
+                txtPreco.Text = produtoBusca.PrecoUnitario.ToString();
                 txtQtd.Text = Convert.ToString(produtoBusca.Qtd);
             }
 
             //exibe os produtos 
 
         }
+
+        private void btIncluir_Click(object sender, EventArgs e)
+        {
+            //recupera os valores dos campos de texto e atribui ao obj
+            Produto p = new Produto();
+
+            p.Descricao = lbProduto.Text;
+            p.Codigo = int.Parse(txtCodigo.Text);
+            p.Qtd = int.Parse(txtQtd.Text);
+            p.PrecoUnitario = double.Parse(txtPreco.Text);
+            
+            lista.Add(p);
+
+            PreencherDGV();
+
+            limparCampos();
+
+            SomaDGV();
+            
+        }
+
+        private void PreencherDGV()
+        {
+            //limpa os valores do vetor da DGV antes de inserir os novos.
+            dgvProdutos.Rows.Clear();
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                string[] nova_linha = new string[]
+                {
+                    lista[i].Descricao,
+                    lista[i].Codigo.ToString(),
+                    lista[i].PrecoUnitario.ToString(),
+                    lista[i].Qtd.ToString()
+                };
+                dgvProdutos.Rows.Add(nova_linha);
+            }
+            
+        }
+
+        private void limparCampos()
+        {
+            txtCodigo.Clear();
+            lbProduto.Text = "";
+            txtPreco.Clear();
+            txtQtd.Clear();
+        }
+
+        private void btFinalizar_Click(object sender, EventArgs e)
+        {
+            /*double con = 0;
+            foreach (var cont in clPreco)
+            {
+                
+            }
+                double.Parse(txtValorRecebido.Text) = clPreco;*/
+            
+        }
+
+        //metodo de acumular coluna da DGV
+        private void SomaDGV()
+        {
+            double soma = 0;
+            foreach (DataGridViewRow row in dgvProdutos.Rows)
+            {
+                soma += Convert.ToDouble(row.Cells["clPreco"].Value)* Convert.ToDouble(row.Cells["clQtd"].Value);
+
+           
+            }
+            txtTotal.Text = soma.ToString();
+        }
+
+
     }
 }
