@@ -94,17 +94,12 @@ namespace PDV
 
         private void btFinalizar_Click(object sender, EventArgs e)
         {
-            /*double con = 0;
-            foreach (var cont in clPreco)
-            {
-                
-            }
-                double.Parse(txtValorRecebido.Text) = clPreco;*/
+            
             
         }
 
         //metodo de acumular coluna da DGV
-        private void SomaDGV()
+        private double SomaDGV()
         {
             double soma = 0;
             foreach (DataGridViewRow row in dgvProdutos.Rows)
@@ -114,8 +109,64 @@ namespace PDV
            
             }
             txtTotal.Text = soma.ToString();
+            return soma;
         }
 
+        private void btRemover_Click(object sender, EventArgs e)
+        {
+            
+           
+           
 
+                //recupera o indice selecionado
+                int indiceLinha = dgvProdutos.CurrentRow.Index;
+
+                
+
+                txtTotal.Text = (Convert.ToDouble(txtTotal.Text) - dgvProdutos.CurrentRow.Index).ToString();
+
+                //remove da lista
+                lista.RemoveAt(indiceLinha);
+
+                //nula referencia da Grid
+                dgvProdutos.DataSource = null;
+
+                PreencherDGV();
+
+                //limpa campos
+                limparCampos();
+               
+
+                
+            
+        }
+
+        private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = dgvProdutos.CurrentRow.Cells[0].Value.ToString();
+            lbProduto.Text = dgvProdutos.CurrentRow.Cells[1].Value.ToString();
+            txtPreco.Text = dgvProdutos.CurrentRow.Cells[2].Value.ToString();
+            txtQtd.Text = dgvProdutos.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        /*public double sub()
+        {
+          
+            
+            double cont = 0;
+            foreach (DataGridViewRow row in dgvProdutos.Rows)
+            {
+                cont -= Convert.ToDouble(row.Cells["clPreco"].Value) * Convert.ToDouble(row.Cells["clQtd"].Value);
+
+
+            }
+            txtTotal.Text = cont.ToString();
+            return cont;
+        }*/
     }
 }
