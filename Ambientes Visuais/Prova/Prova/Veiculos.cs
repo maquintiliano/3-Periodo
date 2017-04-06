@@ -12,6 +12,8 @@ namespace Prova
         public string marca { get; set; }
         public string modelo { get; set; }
         public double valorAluguel { get; set; }
+       // public int datainicio { get; set; }
+       // public int datafim { get; set; }
 
         //contrutores
         public Veiculos()

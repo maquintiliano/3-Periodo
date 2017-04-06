@@ -10,5 +10,22 @@ namespace Prova
     {
         public string nome { get; set; }
         public int cnh{ get; set; }
+        public Cliente()
+        {
+
+        }
+
+        //contruttor com parametro
+        public Cliente(string nome, int cnh)
+        {
+            this.nome=nome;
+            this.cnh = cnh;
+        }
+
+        private List<Cliente> getCliente()
+        {
+            return getCliente();
+
+        }
     }
 }
