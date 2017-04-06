@@ -30,7 +30,7 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.painelPrincipal = new System.Windows.Forms.Panel();
-            this.descicao = new System.Windows.Forms.Label();
+            this.lbdescicao = new System.Windows.Forms.Label();
             this.gbDadosVeiculoCli = new System.Windows.Forms.GroupBox();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.lbCod = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.lbTipoCli = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFormaPagamento = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVeiculo = new System.Windows.Forms.DataGridView();
             this.clCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,26 +59,26 @@
             this.tbCNH = new System.Windows.Forms.TextBox();
             this.painelPrincipal.SuspendLayout();
             this.gbDadosVeiculoCli.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculo)).BeginInit();
             this.gbValores.SuspendLayout();
             this.SuspendLayout();
             // 
             // painelPrincipal
             // 
-            this.painelPrincipal.Controls.Add(this.descicao);
+            this.painelPrincipal.Controls.Add(this.lbdescicao);
             this.painelPrincipal.Location = new System.Drawing.Point(34, 13);
             this.painelPrincipal.Name = "painelPrincipal";
             this.painelPrincipal.Size = new System.Drawing.Size(813, 48);
             this.painelPrincipal.TabIndex = 0;
             // 
-            // descicao
+            // lbdescicao
             // 
-            this.descicao.AutoSize = true;
-            this.descicao.Location = new System.Drawing.Point(378, 14);
-            this.descicao.Name = "descicao";
-            this.descicao.Size = new System.Drawing.Size(55, 13);
-            this.descicao.TabIndex = 0;
-            this.descicao.Text = "Descrição";
+            this.lbdescicao.AutoSize = true;
+            this.lbdescicao.Location = new System.Drawing.Point(378, 14);
+            this.lbdescicao.Name = "lbdescicao";
+            this.lbdescicao.Size = new System.Drawing.Size(55, 13);
+            this.lbdescicao.TabIndex = 0;
+            this.lbdescicao.Text = "Descrição";
             // 
             // gbDadosVeiculoCli
             // 
@@ -109,6 +109,7 @@
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(100, 20);
             this.tbCodigo.TabIndex = 2;
+            this.tbCodigo.Leave += new System.EventHandler(this.tbCodigo_Leave);
             // 
             // lbCod
             // 
@@ -192,18 +193,18 @@
             this.cbFormaPagamento.Size = new System.Drawing.Size(100, 21);
             this.cbFormaPagamento.TabIndex = 11;
             // 
-            // dataGridView1
+            // dgvVeiculo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVeiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clCod,
             this.clMarca,
             this.clModelo,
             this.clValorAluguel});
-            this.dataGridView1.Location = new System.Drawing.Point(349, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(498, 225);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvVeiculo.Location = new System.Drawing.Point(349, 86);
+            this.dgvVeiculo.Name = "dgvVeiculo";
+            this.dgvVeiculo.Size = new System.Drawing.Size(498, 225);
+            this.dgvVeiculo.TabIndex = 2;
             // 
             // clCod
             // 
@@ -320,7 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 427);
             this.Controls.Add(this.gbValores);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVeiculo);
             this.Controls.Add(this.gbDadosVeiculoCli);
             this.Controls.Add(this.painelPrincipal);
             this.Name = "Locadora";
@@ -329,7 +330,7 @@
             this.painelPrincipal.PerformLayout();
             this.gbDadosVeiculoCli.ResumeLayout(false);
             this.gbDadosVeiculoCli.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVeiculo)).EndInit();
             this.gbValores.ResumeLayout(false);
             this.gbValores.PerformLayout();
             this.ResumeLayout(false);
@@ -340,7 +341,7 @@
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel painelPrincipal;
-        private System.Windows.Forms.Label descicao;
+        private System.Windows.Forms.Label lbdescicao;
         private System.Windows.Forms.GroupBox gbDadosVeiculoCli;
         private System.Windows.Forms.Label lbTipoCli;
         private System.Windows.Forms.ComboBox cbTipoCli;
@@ -352,7 +353,7 @@
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.ComboBox cbFormaPagamento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVeiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clCod;
         private System.Windows.Forms.DataGridViewTextBoxColumn clMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn clModelo;
