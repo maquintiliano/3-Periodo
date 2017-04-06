@@ -113,16 +113,11 @@ namespace PDV
 
         private void btRemover_Click(object sender, EventArgs e)
         {
-            
-           
-           
 
                 //recupera o indice selecionado
                 int indiceLinha = dgvProdutos.CurrentRow.Index;
 
-                
-
-                txtTotal.Text = (Convert.ToDouble(txtTotal.Text) - dgvProdutos.CurrentRow.Index).ToString();
+                txtTotal.Text = Convert.ToString(Convert.ToDouble(txtTotal.Text) -(Convert.ToDouble(dgvProdutos.CurrentRow.Index)* Convert.ToDouble(txtQtd.Text)));
 
                 //remove da lista
                 lista.RemoveAt(indiceLinha);
@@ -134,10 +129,6 @@ namespace PDV
 
                 //limpa campos
                 limparCampos();
-               
-
-                
-            
         }
 
         private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
