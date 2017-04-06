@@ -31,7 +31,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.painelPrincipal = new System.Windows.Forms.Panel();
             this.descicao = new System.Windows.Forms.Label();
-            this.gbVeiculo = new System.Windows.Forms.GroupBox();
+            this.gbDadosVeiculoCli = new System.Windows.Forms.GroupBox();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.lbCod = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,8 +53,12 @@
             this.btIncluir = new System.Windows.Forms.Button();
             this.btRemoever = new System.Windows.Forms.Button();
             this.btFinalizar = new System.Windows.Forms.Button();
+            this.lbNome = new System.Windows.Forms.Label();
+            this.tbNome = new System.Windows.Forms.TextBox();
+            this.lbCNH = new System.Windows.Forms.Label();
+            this.tbCNH = new System.Windows.Forms.TextBox();
             this.painelPrincipal.SuspendLayout();
-            this.gbVeiculo.SuspendLayout();
+            this.gbDadosVeiculoCli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbValores.SuspendLayout();
             this.SuspendLayout();
@@ -76,24 +80,28 @@
             this.descicao.TabIndex = 0;
             this.descicao.Text = "Descrição";
             // 
-            // gbVeiculo
+            // gbDadosVeiculoCli
             // 
-            this.gbVeiculo.Controls.Add(this.btRemoever);
-            this.gbVeiculo.Controls.Add(this.cbTipoCli);
-            this.gbVeiculo.Controls.Add(this.btIncluir);
-            this.gbVeiculo.Controls.Add(this.lbTipoCli);
-            this.gbVeiculo.Controls.Add(this.tbDataFim);
-            this.gbVeiculo.Controls.Add(this.lbDataFim);
-            this.gbVeiculo.Controls.Add(this.tbDataInicio);
-            this.gbVeiculo.Controls.Add(this.label1);
-            this.gbVeiculo.Controls.Add(this.lbCod);
-            this.gbVeiculo.Controls.Add(this.tbCodigo);
-            this.gbVeiculo.Location = new System.Drawing.Point(34, 79);
-            this.gbVeiculo.Name = "gbVeiculo";
-            this.gbVeiculo.Size = new System.Drawing.Size(274, 179);
-            this.gbVeiculo.TabIndex = 1;
-            this.gbVeiculo.TabStop = false;
-            this.gbVeiculo.Text = "Veiculo";
+            this.gbDadosVeiculoCli.Controls.Add(this.lbCNH);
+            this.gbDadosVeiculoCli.Controls.Add(this.tbCNH);
+            this.gbDadosVeiculoCli.Controls.Add(this.lbNome);
+            this.gbDadosVeiculoCli.Controls.Add(this.tbNome);
+            this.gbDadosVeiculoCli.Controls.Add(this.btRemoever);
+            this.gbDadosVeiculoCli.Controls.Add(this.cbTipoCli);
+            this.gbDadosVeiculoCli.Controls.Add(this.btIncluir);
+            this.gbDadosVeiculoCli.Controls.Add(this.lbTipoCli);
+            this.gbDadosVeiculoCli.Controls.Add(this.tbDataFim);
+            this.gbDadosVeiculoCli.Controls.Add(this.lbDataFim);
+            this.gbDadosVeiculoCli.Controls.Add(this.tbDataInicio);
+            this.gbDadosVeiculoCli.Controls.Add(this.label1);
+            this.gbDadosVeiculoCli.Controls.Add(this.lbCod);
+            this.gbDadosVeiculoCli.Controls.Add(this.tbCodigo);
+            this.gbDadosVeiculoCli.Location = new System.Drawing.Point(34, 79);
+            this.gbDadosVeiculoCli.Name = "gbDadosVeiculoCli";
+            this.gbDadosVeiculoCli.Size = new System.Drawing.Size(274, 232);
+            this.gbDadosVeiculoCli.TabIndex = 1;
+            this.gbDadosVeiculoCli.TabStop = false;
+            this.gbDadosVeiculoCli.Text = "Dados";
             // 
             // tbCodigo
             // 
@@ -194,7 +202,7 @@
             this.clValorAluguel});
             this.dataGridView1.Location = new System.Drawing.Point(349, 86);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(498, 172);
+            this.dataGridView1.Size = new System.Drawing.Size(498, 225);
             this.dataGridView1.TabIndex = 2;
             // 
             // clCod
@@ -224,7 +232,7 @@
             this.gbValores.Controls.Add(this.lbTotal);
             this.gbValores.Controls.Add(this.cbFormaPagamento);
             this.gbValores.Controls.Add(this.label2);
-            this.gbValores.Location = new System.Drawing.Point(34, 264);
+            this.gbValores.Location = new System.Drawing.Point(34, 317);
             this.gbValores.Name = "gbValores";
             this.gbValores.Size = new System.Drawing.Size(274, 100);
             this.gbValores.TabIndex = 3;
@@ -249,7 +257,7 @@
             // 
             // btIncluir
             // 
-            this.btIncluir.Location = new System.Drawing.Point(112, 150);
+            this.btIncluir.Location = new System.Drawing.Point(115, 203);
             this.btIncluir.Name = "btIncluir";
             this.btIncluir.Size = new System.Drawing.Size(75, 23);
             this.btIncluir.TabIndex = 4;
@@ -258,7 +266,7 @@
             // 
             // btRemoever
             // 
-            this.btRemoever.Location = new System.Drawing.Point(193, 150);
+            this.btRemoever.Location = new System.Drawing.Point(196, 203);
             this.btRemoever.Name = "btRemoever";
             this.btRemoever.Size = new System.Drawing.Size(75, 23);
             this.btRemoever.TabIndex = 5;
@@ -274,6 +282,38 @@
             this.btFinalizar.Text = "Finalizar";
             this.btFinalizar.UseVisualStyleBackColor = true;
             // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.Location = new System.Drawing.Point(82, 137);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(38, 13);
+            this.lbNome.TabIndex = 4;
+            this.lbNome.Text = "Nome:";
+            // 
+            // tbNome
+            // 
+            this.tbNome.Location = new System.Drawing.Point(168, 134);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(100, 20);
+            this.tbNome.TabIndex = 5;
+            // 
+            // lbCNH
+            // 
+            this.lbCNH.AutoSize = true;
+            this.lbCNH.Location = new System.Drawing.Point(82, 163);
+            this.lbCNH.Name = "lbCNH";
+            this.lbCNH.Size = new System.Drawing.Size(33, 13);
+            this.lbCNH.TabIndex = 10;
+            this.lbCNH.Text = "CNH:";
+            // 
+            // tbCNH
+            // 
+            this.tbCNH.Location = new System.Drawing.Point(168, 160);
+            this.tbCNH.Name = "tbCNH";
+            this.tbCNH.Size = new System.Drawing.Size(100, 20);
+            this.tbCNH.TabIndex = 11;
+            // 
             // Locadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,14 +321,14 @@
             this.ClientSize = new System.Drawing.Size(884, 427);
             this.Controls.Add(this.gbValores);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.gbVeiculo);
+            this.Controls.Add(this.gbDadosVeiculoCli);
             this.Controls.Add(this.painelPrincipal);
             this.Name = "Locadora";
             this.Text = "Locadora de Veiculos";
             this.painelPrincipal.ResumeLayout(false);
             this.painelPrincipal.PerformLayout();
-            this.gbVeiculo.ResumeLayout(false);
-            this.gbVeiculo.PerformLayout();
+            this.gbDadosVeiculoCli.ResumeLayout(false);
+            this.gbDadosVeiculoCli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbValores.ResumeLayout(false);
             this.gbValores.PerformLayout();
@@ -301,7 +341,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel painelPrincipal;
         private System.Windows.Forms.Label descicao;
-        private System.Windows.Forms.GroupBox gbVeiculo;
+        private System.Windows.Forms.GroupBox gbDadosVeiculoCli;
         private System.Windows.Forms.Label lbTipoCli;
         private System.Windows.Forms.ComboBox cbTipoCli;
         private System.Windows.Forms.TextBox tbDataFim;
@@ -323,6 +363,10 @@
         private System.Windows.Forms.Button btIncluir;
         private System.Windows.Forms.Button btRemoever;
         private System.Windows.Forms.Button btFinalizar;
+        private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.TextBox tbNome;
+        private System.Windows.Forms.Label lbCNH;
+        private System.Windows.Forms.TextBox tbCNH;
     }
 }
 
