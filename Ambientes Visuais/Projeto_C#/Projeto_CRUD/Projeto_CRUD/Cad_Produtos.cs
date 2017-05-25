@@ -17,11 +17,7 @@ namespace Projeto_CRUD
         public formCad_Produtos()
         {
             InitializeComponent();
-        }
-
-        private void formCad_Produtos_Load(object sender, EventArgs e)
-        {
-
+            preencherForn();
         }
 
         private void btCadastrar_Click(object sender, EventArgs e)
@@ -42,21 +38,22 @@ namespace Projeto_CRUD
                 MessageBox.Show("Erro no cadastro!" + ex.Message);
             }
         }
+        private void preencherForn()
+        {
 
+            Fornecedor forn= new Fornecedor();
+            List<Fornecedor> lista = forn.listar();
+
+            foreach (var fornecedor in lista)
+            {
+                cbFornecedores.Items.Add(fornecedor);
+            }
+        }
 
         private void cbFornecedores_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Produtos fornecedorSelecionado = (Produtos)cbFornecedores.SelectedItem;
+            Fornecedor fornecedorSelecionado = (Fornecedor)cbFornecedores.SelectedItem;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.cbFornecedores.Items.AddRange(new[]
-                {
-                new Fornecedor("AmBev"),
-            });
-
-            this.cbFornecedores.SelectedItem = "AmBev"; // tipo string não se compara com tipo Fornecedores
-        }
     }
 }

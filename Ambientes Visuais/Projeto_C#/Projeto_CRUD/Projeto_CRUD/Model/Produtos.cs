@@ -54,6 +54,7 @@ namespace Projeto_CRUD.Model
                 {
                     conexao.Close();
                 }
+
             }
         }
 
