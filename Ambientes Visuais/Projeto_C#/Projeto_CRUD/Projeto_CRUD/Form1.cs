@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projeto_CRUD.Model;
 
 namespace Projeto_CRUD
 {
@@ -36,9 +37,6 @@ namespace Projeto_CRUD
                 this.Hide();        //fecha formularia inicial
             }
         }
-
-        
-
 
 
     }

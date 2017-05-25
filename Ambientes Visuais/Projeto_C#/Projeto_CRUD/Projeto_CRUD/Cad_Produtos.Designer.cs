@@ -37,10 +37,10 @@
             this.btAtualizar = new System.Windows.Forms.Button();
             this.btExcluir = new System.Windows.Forms.Button();
             this.gbCadProd = new System.Windows.Forms.GroupBox();
+            this.tbValor = new System.Windows.Forms.TextBox();
+            this.tbQuantidade = new System.Windows.Forms.TextBox();
             this.cbFornecedores = new System.Windows.Forms.ComboBox();
             this.tbProduto = new System.Windows.Forms.TextBox();
-            this.tbQuantidade = new System.Windows.Forms.TextBox();
-            this.tbValor = new System.Windows.Forms.TextBox();
             this.lbLocalizar = new System.Windows.Forms.Label();
             this.tbLocalizar = new System.Windows.Forms.TextBox();
             this.gbCadProd.SuspendLayout();
@@ -99,6 +99,7 @@
             this.btCadastrar.TabIndex = 7;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = true;
+            this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 
             // btAtualizar
             // 
@@ -135,20 +136,12 @@
             this.gbCadProd.TabStop = false;
             this.gbCadProd.Text = "Cadastro de produtos";
             // 
-            // cbFornecedores
+            // tbValor
             // 
-            this.cbFornecedores.FormattingEnabled = true;
-            this.cbFornecedores.Location = new System.Drawing.Point(100, 19);
-            this.cbFornecedores.Name = "cbFornecedores";
-            this.cbFornecedores.Size = new System.Drawing.Size(121, 21);
-            this.cbFornecedores.TabIndex = 3;
-            // 
-            // tbProduto
-            // 
-            this.tbProduto.Location = new System.Drawing.Point(100, 46);
-            this.tbProduto.Name = "tbProduto";
-            this.tbProduto.Size = new System.Drawing.Size(100, 20);
-            this.tbProduto.TabIndex = 4;
+            this.tbValor.Location = new System.Drawing.Point(100, 98);
+            this.tbValor.Name = "tbValor";
+            this.tbValor.Size = new System.Drawing.Size(100, 20);
+            this.tbValor.TabIndex = 6;
             // 
             // tbQuantidade
             // 
@@ -157,12 +150,21 @@
             this.tbQuantidade.Size = new System.Drawing.Size(100, 20);
             this.tbQuantidade.TabIndex = 5;
             // 
-            // tbValor
+            // cbFornecedores
             // 
-            this.tbValor.Location = new System.Drawing.Point(100, 98);
-            this.tbValor.Name = "tbValor";
-            this.tbValor.Size = new System.Drawing.Size(100, 20);
-            this.tbValor.TabIndex = 6;
+            this.cbFornecedores.FormattingEnabled = true;
+            this.cbFornecedores.Location = new System.Drawing.Point(100, 19);
+            this.cbFornecedores.Name = "cbFornecedores";
+            this.cbFornecedores.Size = new System.Drawing.Size(121, 21);
+            this.cbFornecedores.TabIndex = 3;
+            this.cbFornecedores.SelectedIndexChanged += new System.EventHandler(this.cbFornecedores_SelectedIndexChanged);
+            // 
+            // tbProduto
+            // 
+            this.tbProduto.Location = new System.Drawing.Point(100, 46);
+            this.tbProduto.Name = "tbProduto";
+            this.tbProduto.Size = new System.Drawing.Size(100, 20);
+            this.tbProduto.TabIndex = 4;
             // 
             // lbLocalizar
             // 
