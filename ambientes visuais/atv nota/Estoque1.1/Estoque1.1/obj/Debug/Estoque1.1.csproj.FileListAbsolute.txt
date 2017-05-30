@@ -1,0 +1,14 @@
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\bin\Debug\Estoque1.1.exe.config
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\bin\Debug\Estoque1.1.exe
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\bin\Debug\Estoque1.1.pdb
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\bin\Debug\Mono.Security.dll
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\bin\Debug\Npgsql.dll
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1._1.Form1.resources
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1._1.Form2.resources
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1._1.Form3.resources
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1._1.Form4.resources
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1._1.Properties.Resources.resources
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1.1.csproj.GenerateResource.Cache
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1.1.exe
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1.1.pdb
+c:\users\maaqu\documents\visual studio 2017\Projects\Estoque1.1\Estoque1.1\obj\Debug\Estoque1.1.csprojResolveAssemblyReference.cache

@@ -1,0 +1,26 @@
+create table cadastro (
+
+	id_cad serial primary key,
+	usuario varchar (10) not null,
+	senha numeric (10) not null
+);
+
+create table fornecedor (
+
+	id_forn serial primary key,
+	fornecedor varchar (40) not null,
+	mercadoria varchar (40) not null,
+	telefone numeric (12) not null
+);
+
+create table produto(
+
+	id_prod serial primary key,
+	produto varchar (40) not null,
+	quantidade numeric (3) not null,
+	valor_unit numeric (6) not null,
+	id_forn serial,
+	constraint id_forn foreign key (id_forn) references fornecedor (id_forn)
+);
+
+insert into cadastro (usuario,senha) values ('admin',123);
